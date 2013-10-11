@@ -1,0 +1,60 @@
+%\documentclass[10pt,a4paper]{article}
+
+\documentclass[10pt,a4paper]{llncs}
+
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage[utf8]{inputenc}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{cleveref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\newcommand{\todo}[1]{{\color{red}\textsf{\textbf{TODO}}: #1}}
+\newcommand{\uri}[1]{\texttt{#1}}
+\newcommand{\word}[1]{`#1'}
+\newcommand{\model}[1]{\textsf{#1}}
+%\newcommand{\Cref}[1]{\ref{#1}}
+\crefname{table}{Table}{Tables}
+
+\title{Enhancing Named Entity Recognition and Disambiguation via Multilingual Data Fusion}
+\author{Renan Dembogurski}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+
+Temos que decidir se vamos no caminho do Data Fusion ou não. Talvez o caminho seja: Enhancing Named Entity Recognition and Disambiguation via Multilingual Data Fusion. Algo assim. Mas temos que tomar cuidado pra não crescer o problema muito. Acho que nos mantemos no seguinte:
+
+pegamos tipos de outras línguas, avaliamos a acurácia da fusão.
+usando tipos extendidos, extraímos um corpus de NER, treinamos e avaliamos.
+reportamos que nossa cobertura com tipos extendidos melhorou.
+assuma-se portugues como língua sendo avaliada. usando sameAs, pegamos parágrafos de outras línguas (ex: Ingles), pegamos as entidades nos parágrafos em ingles, e pegamos os labels em portugues.
+avaliamos a eficacia de desambiguacao com o indice normal do portugues, e com o indice expandido com contexto do ingles.
+
+
+\section{Related Work}
+
+
+\section{Methodology}
+
+\section{Experiments}
+
+...
+
+
+\section{Conclusion}
+
+
+\bibliographystyle{splncs03}
+\bibliography{eswc}
+
+\end{document}
