@@ -1,6 +1,5 @@
-%\documentclass[10pt,a4paper]{article}
-
-\documentclass[10pt,a4paper]{llncs}
+\documentclass[10pt,a4paper]{article}
+%\documentclass[10pt,a4paper]{llncs}
 
 \usepackage{makeidx}  % allows for indexgeneration
 \usepackage[utf8]{inputenc}
@@ -12,16 +11,19 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{color}
 
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
 \newcommand{\todo}[1]{{\color{red}\textsf{\textbf{TODO}}: #1}}
 \newcommand{\uri}[1]{\texttt{#1}}
 \newcommand{\word}[1]{`#1'}
 \newcommand{\model}[1]{\textsf{#1}}
+\newcommand{\copypaste}[1]{``{\color{gray}{#1}}''}
 %\newcommand{\Cref}[1]{\ref{#1}}
 \crefname{table}{Table}{Tables}
 
 \title{Enhancing Named Entity Recognition and Disambiguation via Multilingual Data Fusion}
-\author{Renan Dembogurski}
+\author{TBD}
 \date{\today}
 
 \begin{document}
@@ -32,24 +34,61 @@
 
 \section{Introduction}
 
-Temos que decidir se vamos no caminho do Data Fusion ou não. Talvez o caminho seja: Enhancing Named Entity Recognition and Disambiguation via Multilingual Data Fusion. Algo assim. Mas temos que tomar cuidado pra não crescer o problema muito. Acho que nos mantemos no seguinte:
+%===== DICAS ======
+%- Digite uma frase por linha, assim fazer merge fica muito mais fácil com ferramentas de diff (tipo meld ou winmerge)
+%- Sempre marque copy+paste com aspas e de preferencia com \verbatim{} ou \copypaste
 
-pegamos tipos de outras línguas, avaliamos a acurácia da fusão.
-usando tipos extendidos, extraímos um corpus de NER, treinamos e avaliamos.
-reportamos que nossa cobertura com tipos extendidos melhorou.
-assuma-se portugues como língua sendo avaliada. usando sameAs, pegamos parágrafos de outras línguas (ex: Ingles), pegamos as entidades nos parágrafos em ingles, e pegamos os labels em portugues.
-avaliamos a eficacia de desambiguacao com o indice normal do portugues, e com o indice expandido com contexto do ingles.
+Summary:
+\begin{itemize}
+\item pegamos tipos de outras línguas, avaliamos a acurácia da fusão. (10\% do valor do artigo)
+\item usando tipos extendidos, extraímos um corpus de NER, treinamos e avaliamos.
+\item reportamos que nossa cobertura com tipos extendidos melhorou.  (40\% do valor do artigo)
+\item assuma-se portugues como língua sendo avaliada. usando sameAs, pegamos parágrafos de outras línguas (ex: Ingles), pegamos as entidades nos parágrafos em ingles, e pegamos os labels em portugues. 
+avaliamos a eficacia de desambiguacao com o indice normal do portugues, e com o indice expandido com contexto do ingles. (50\% do valor do artigo)
+\end{itemize}
 
 
 \section{Related Work}
 
+\paragraph{Data Fusion}
+Data Fusion is... (quickly paraphrase from paper by Bleiholder and Naumann) - 1 paragraph
+
+Wikipedia has cross-language links... allows us to complement one language with information from another.
+Palmero et al. \copypaste{present a resource obtained by automatically mapping templates in 25 languages.} \cite{iknow13palmero}
+
+Other authors have also worked on extending types...
+Gangemi et al. present T\'{ipalo}, a tool that \copypaste{identifies the most appropriate types for an entity by interpreting its natural language definition, which is extracted from its corresponding Wikipedia page abstract.} \cite{iswc12gangemi}
+
+%Classifying the Wikipedia Articles into the OpenCyc Taxonomy
+%http://ceur-ws.org/Vol-906/paper2.pdf
+
+\paragraph{Cross-language}
+Cross-language entity linking is the problem ``where documents and named entities are in a different language than that used for the content of the reference knowledge base.''
+Their \copypaste{best model achieves performance which is 94\% of a strong monolingual baseline.}
+http://www.aclweb.org/anthology/I/I11/I11-1029.pdf
+
+\todo{get/generate bibtex}
+Cross Lingual Entity Linking with Bilingual Topic Model
+Tao Zhang, Kang Liu and Jun Zhao
+http://ijcai.org/papers13/Papers/IJCAI13-327.pdf
+
+\todo{get/generate bibtex}
+Analysis and Refinement of Cross-lingual Entity Linking
+http://nlp.cs.rpi.edu/paper/clef2012.pdf
+
+We are rather looking at complementing resource-poor languages. 
+We show that our best model actually improves the results.
+We do not perform only entity-linking but the full annotation (NER+NEL)
 
 \section{Methodology}
 
 \section{Experiments}
 
-...
+\subsection{Data Fusion Evaluation}
 
+\subsection{NER Evaluation}
+
+\subsection{Cross-language Entity Linking Evaluation}
 
 \section{Conclusion}
 
