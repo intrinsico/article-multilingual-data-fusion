@@ -77,18 +77,37 @@ Analysis and Refinement of Cross-lingual Entity Linking
 http://nlp.cs.rpi.edu/paper/clef2012.pdf
 
 We are rather looking at complementing resource-poor languages. 
+We use both ontology-derived and corpus-derived context.
 We show that our best model actually improves the results.
 We do not perform only entity-linking but the full annotation (NER+NEL)
 
 \section{Methodology}
 
+DBpedia exists in several languages...
+Through sameAs links it maps between different chapters...
+Types defined in one language can be transferred to other languages...
+After expanding the type coverage, we can obtain a corpus from Wikipedia to train NER...
+
+NER is not the whole story. Still need to disambiguate...
+Some languages have fewer text available for training...
+Corpus can also be used to expand corpus and train NEL systems cross-language...
+
 \section{Experiments}
+
 
 \subsection{Data Fusion Evaluation}
 
+Did our strategy for expanding types worked? How many were right/wrong?
+
 \subsection{NER Evaluation}
 
+Evaluations on monolingual system obtained X\% precision and recall...
+Cross-lingual improved?
+
 \subsection{Cross-language Entity Linking Evaluation}
+
+Evaluations on monolingual system obtained X\% precision and recall...
+Cross-lingual improved?
 
 \section{Conclusion}
 
